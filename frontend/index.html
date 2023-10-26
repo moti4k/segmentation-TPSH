@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
   </head>
+  <style>
+      body {
+          margin: 0 !important;
+          width: 100% !important;
+          height: fit-content !important;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          background: #303040;
+      }
+
+      body::-webkit-scrollbar {
+          display: none;
+      }
+  </style>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
