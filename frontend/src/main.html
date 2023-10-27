@@ -1,0 +1,175 @@
+<html>
+  <meta charset="UTF-8">
+  <title>PACIFIC SEGMENT</title>
+</html>
+
+<body>
+  <div class="Wrapper">
+    <div class="BGImage1"></div>
+    <div class="Header">
+      <div>pacific segment</div>
+    </div>
+    <div class="Text">Инновационная технология для сегментации спутниковых снимков</div>
+  </div>
+  <div class="Wrapper">
+    <div class="BGImage2"></div>
+    <div class="Filler"></div>
+    <div class="Info">
+      <div class="Name" style="text-align: left; margin-left: 2%">
+        <div>
+          Автоматизация создания карт
+        </div>
+      </div>
+      <div class="Desc" style="text-align: right; margin-left: 2%; margin-right: 2%">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="Filler"></div>
+  </div>
+
+  <div class="Wrapper">
+    <div class="BGImage3"></div>
+    <div class="Filler"></div>
+    <div class="Info2">
+      <div class="Desc" style="text-align: left; margin-left: 2%">
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+      <div class="Name" style="text-align: right; margin-left: 2%; margin-right: 2%">
+        <div>
+          Автоматизация создания карт
+        </div>
+      </div>
+    </div>
+    <div class="Filler"></div>
+  </div>
+</body>
+
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@500&display=swap');
+
+body {
+    margin: 0;
+    overflow-scrolling: unset;
+    -webkit-overflow-scrolling: unset;
+    width: fit-content;
+    height: fit-content;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {display: none;}
+
+.Wrapper {
+  top: 0;left: 0;right: 0;bottom: 0;
+  aspect-ratio: 16/9;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Montserrat', Bahnschrift, serif;
+  font-size: 100vw;
+  background-size: 100vw;
+  color: white;
+}
+
+.Header, .Text {
+  z-index: 1; display: table; text-align: center; height: 50%;
+  position: relative; align-self: center; margin: auto;
+}
+
+.Header {font-size: 7%; text-transform: uppercase;}
+.Text {font-size: 5%;}
+
+.Header div, .Text div {display: table-cell; vertical-align: middle; height: 100%; margin: auto}
+
+
+@keyframes appear {
+  0% {opacity: 0; transform: translateY(-3%)}
+  100% {opacity: 1; transform: translateY(0)}
+}
+
+.Header {animation: appear 2s}
+.Text {animation: appear 2s}
+
+
+.BGImage1, .BGImage2, .BGImage3, .BlackBG {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  z-index: -1;
+}
+.BGImage1 {animation: lighter 2s;}
+@keyframes lighter { 0% {filter: brightness(0)} 100% {filter: brightness(70%)} }
+
+
+@media (min-aspect-ratio: 16/9) {
+    .BGImage1 {background-image: url("assets/sattelite_pc.png");filter: brightness(70%)}
+    .BGImage2 {background-image: url("assets/earth_pc.png");}
+    .BGImage3 {background-image: url("assets/construction_pc.png");}
+}
+@media (min-aspect-ratio: 9/16) {
+    .BGImage1 {background-image: url("assets/sea_sm.jpg");filter: brightness(70%)}
+    .BGImage2 {background-image: url("assets/city_sm.jpg");}
+    .BGImage3 {background-image: url("assets/sea_p_sm.jpg");}
+}
+
+
+.Wrapper:hover > .Info {width: 100%;transition: 2s;}
+.Wrapper:hover > .Info .Desc {opacity: 1;}
+.Wrapper:hover > .Info .Desc div {font-size: 30em;transition: 2s;animation: letter 2s;}
+
+.Wrapper:hover > .Info2 {width: 100%;margin-left: 0;transition: 2s;}
+.Wrapper:hover > .Info2 .Desc {opacity: 1;}
+.Wrapper:hover > .Info2 .Desc div {font-size: 30em;transition: 2s;animation: letter 2s;}
+
+.Filler {width: 100%;height: 20%;position: relative;}
+
+.Info, .Info2 {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 50%);
+  transition: 2s;
+}
+
+.Info2 {margin-left: 50%;}
+
+.Name, .Desc {
+  width: 48%;
+  height: 100%;
+  position: relative;
+  color: white;
+  display: table;
+  transition: 2s;
+  opacity: 1;
+}
+
+.Name {font-size: 5%;}
+.Desc {font-size: 0.1%;width: 98%;opacity: 0;transition: 0s;}
+
+.Name div, .Desc div {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.Info:hover {width: 100%;transition: 2s;}
+.Info2:hover {width: 100%;margin-left: 0;transition: 2s;}
+
+@keyframes letter {
+  0% {opacity: 0; transform: translateY(-1%)}
+  100% {opacity: 1; transform: translateY(0)}
+}
+
+.Info:hover > .Desc, .Info2:hover > .Desc {opacity: 1;}
+.Info:hover > .Desc div, .Info2:hover > .Desc div {font-size: 1%;transition: 2s;animation: letter 2s;}
+</style>
