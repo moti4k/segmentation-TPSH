@@ -1,3 +1,4 @@
+import os
 from yandex_geocoder import Client
 from decimal import Decimal
 import requests
@@ -6,7 +7,7 @@ from bs4 import BeautifulSoup
 def main():
     headers = requests.utils.default_headers()
 
-    client = Client("603aef28-cf3e-45ff-9f66-042f6159441d")
+    client = Client(os.environ["YANDEX_GEOCODER_API_KEY"])
     a, b = map(float, input('введите долготу и широту:\n').split(', '))
     # 131.887845, 43.026438
     a, b = b, a
